@@ -1,0 +1,53 @@
+{
+    "name": "bakome/laravel-validation-attributes",
+    "authors": [
+        {
+            "name": "Aleksandar Bako Markovski",
+            "email": "aleksandar.markovski_bako@yahoo.com",
+            "homepage": "https://bako.me"
+        }
+    ],
+    "keywords": [
+        "attributes",
+        "laravel-validation-attributes"
+    ],
+    "homepage": "https://github.com/bakome/laravel-validation-attributes",
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^8.12",
+        "psalm/plugin-laravel": "^1.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3",
+        "vimeo/psalm": "^4.1",
+        "mockery/mockery": "^1.4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bakome\\ValidationAttributes\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bakome\\ValidationAttributes\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bakome\\ValidationAttributes\\ValidationAttributesServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
